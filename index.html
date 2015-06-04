@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>jquery ajax</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tut.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">            
+                
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+               <h1 class="title">JQUERY AJAX!!!!!!</h1>
+                <h2>Coffee Orders</h2>
+                    <ul id="orders"></ul>
+
+                    <template id="order-template">
+                    <li data-id='{{id}}'>   
+                    <p>
+                        <strong>name: </strong>
+                        <span class="noedit name">{{name}}</span>
+                        <input class="edit name">
+                    </p>   
+                    <p>
+                        <strong>drink: </strong>
+                        <span class="noedit drink">{{drink}}</span>
+                        <input class="edit drink">
+                    </p>    
+                     <button data-id='{{id}}' class='remove'>X</button>
+                     <button class="editOrder noedit">Edit</button>
+                     <button class="saveEdit edit">Save</button>
+                     <button class="cancelEdit edit">Cancel</button>    
+                     </li> 
+                    </template>
+
+
+                    <h4> Add a Coffee Order</h4>
+
+                    <p>name: <input type="text" id="name"></p>
+                    <p>drink: <input type="text" id="drink"></p>
+                    <button id="add-order">Add</button>
+                
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>footer</h3>
+            </footer>
+        </div>
+
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/mustache.js"></script>
+    </body>
+</html>
